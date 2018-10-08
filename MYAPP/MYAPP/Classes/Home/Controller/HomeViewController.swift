@@ -8,16 +8,35 @@
 
 import UIKit
 
-let kTitleView: CGFloat = 40
+let kTitleViewH: CGFloat = 40
 
 class HomeViewController: UIViewController {
     // MARK: - 标题栏懒加载属性
-        private lazy var pageTitleView: PageTitleView = {
-        let titleFrame = CGRect(x: 0, y: kStateBarH + kNavBarH, width: kScreenW, height: kTitleView)
+    private lazy var pageTitleView: PageTitleView = { [weak self] in
+        let titleFrame = CGRect(x: 0, y: kStateBarH + kNavBarH, width: kScreenW, height: kTitleViewH)
         let titles = ["推荐", "游戏", "娱乐", "趣玩"]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
-            return titleView
+        titleView.delegate = self
+        return titleView
     }()
+    
+    private lazy var pageContentView: PageContentView = { [weak self] in
+        // 1.确定内容的frame
+        let kContentH = kScreenH - kStateBarH - kNavBarH - kTitleViewH - kTabBarH
+        let contentFrame = CGRect(x: 0, y: kStateBarH + kNavBarH + kTitleViewH, width: kScreenW, height: kContentH)
+        // 2.确定所有的子控制器
+        var childVcs = [UIViewController]()
+        childVcs.append(RecommendViewController())     //创建“推荐“
+        for _ in 0..<3 {
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))   //生成rgb随机颜色
+            childVcs.append(vc)
+        }
+        let contentView = PageContentView(frame: contentFrame, childVcs: childVcs, parentViewController: self)
+        contentView.delegate = self
+        return contentView
+    }()
+    
     // MARK: - 系统回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +48,14 @@ class HomeViewController: UIViewController {
     // MARK: - 设置UI界面
 extension HomeViewController {
      private func setupUI() {
-        //0.不希望系统自动调整scollView的内边距
-        pageTitleView.scrollView.contentInsetAdjustmentBehavior = .never
-        //1.设置导航栏
+        // 0.不希望系统自动调整scollView的内边距
+        //pageTitleView.scrollView.contentInsetAdjustmentBehavior = .never
+        // 1.设置导航栏
         setupNavigationBar()
-        //2.设置titleView
+        // 2.添加titleView
         view.addSubview(pageTitleView)
+        // 3.添加contentView
+        view.addSubview(pageContentView)
     }
      private func setupNavigationBar() {
        //设置左侧导航栏按钮
@@ -49,5 +70,18 @@ extension HomeViewController {
         navigationItem.rightBarButtonItems = [historyItem, searchItem, qrCodeItem]
         
         
+    }
+}
+// 遵守PageTitleViewDelegate协议
+extension HomeViewController: PageTitleViewDelegate {
+    func pageTitleView(titleView: PageTitleView, selectedIndex index: Int) {
+        pageContentView.setCurrentIndex(currentIndex: index)
+    }
+}
+
+//遵守PageContentViewDelegate协议
+extension HomeViewController: PageContentViewDelegate {
+    func pageContentView(contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        pageTitleView.setTitleWithProgress(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
     }
 }

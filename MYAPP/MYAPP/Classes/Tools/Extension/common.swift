@@ -8,6 +8,7 @@
 
 import UIKit
 
+let kTabBarH: CGFloat = 49
 let kStateBarH: CGFloat = UIApplication.shared.statusBarFrame.height    //储存状态栏高度
 let kNavBarH: CGFloat = 44                                              //储存导航栏高度
 let kScreenW: CGFloat = UIScreen.main.bounds.width                      //储存屏幕宽度
