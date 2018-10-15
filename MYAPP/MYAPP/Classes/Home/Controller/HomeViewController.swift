@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     // MARK: - 标题栏懒加载属性
     private lazy var pageTitleView: PageTitleView = { [weak self] in
         let titleFrame = CGRect(x: 0, y: kStateBarH + kNavBarH, width: kScreenW, height: kTitleViewH)
-        let titles = ["推荐", "游戏", "娱乐", "趣玩"]
+        let titles = ["recommand", "game", "entertain", "play"]
         let titleView = PageTitleView(frame: titleFrame, titles: titles)
         titleView.delegate = self
         return titleView

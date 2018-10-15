@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fyg-5t-7jy">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="veW-lh-6a1">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="10"/>
+                    <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="QuX-JE-A5x"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a68-JP-s88">
+                    <rect key="frame" x="10" y="21" width="40" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQo-yI-0xe">
+                    <rect key="frame" x="316" y="15" width="49" height="30"/>
+                    <state key="normal" title="More &gt;">
+                        <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    </state>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="a68-JP-s88" firstAttribute="top" secondItem="veW-lh-6a1" secondAttribute="bottom" constant="11" id="Jbq-Fk-q0s"/>
+                <constraint firstItem="veW-lh-6a1" firstAttribute="leading" secondItem="7Rj-ha-Qd2" secondAttribute="leading" id="LeG-3A-e6U"/>
+                <constraint firstItem="7Rj-ha-Qd2" firstAttribute="trailing" secondItem="veW-lh-6a1" secondAttribute="trailing" id="TfN-Od-YSm"/>
+                <constraint firstItem="veW-lh-6a1" firstAttribute="top" secondItem="7Rj-ha-Qd2" secondAttribute="top" id="UHB-B4-BOi"/>
+                <constraint firstItem="PQo-yI-0xe" firstAttribute="top" secondItem="veW-lh-6a1" secondAttribute="bottom" constant="5" id="VEu-3C-YIc"/>
+                <constraint firstItem="a68-JP-s88" firstAttribute="leading" secondItem="7Rj-ha-Qd2" secondAttribute="leading" constant="10" id="Xcd-SN-jeW"/>
+                <constraint firstItem="7Rj-ha-Qd2" firstAttribute="trailing" secondItem="PQo-yI-0xe" secondAttribute="trailing" constant="10" id="ZUS-Wi-DLS"/>
+                <constraint firstItem="7Rj-ha-Qd2" firstAttribute="bottom" secondItem="a68-JP-s88" secondAttribute="bottom" constant="12" id="fBk-Sf-ASe"/>
+                <constraint firstItem="7Rj-ha-Qd2" firstAttribute="bottom" secondItem="PQo-yI-0xe" secondAttribute="bottom" constant="5" id="kQM-CP-rnZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="7Rj-ha-Qd2"/>
+            <point key="canvasLocation" x="45.652173913043484" y="-25.271739130434785"/>
+        </collectionReusableView>
+    </objects>
+</document>

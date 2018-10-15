@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bZw-ap-En7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,7 +14,7 @@
             <objects>
                 <viewController id="Vad-dc-J4Q" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tvo-7q-imu">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="AXn-qC-UCw"/>
@@ -22,14 +25,14 @@
             </objects>
             <point key="canvasLocation" x="972" y="-203"/>
         </scene>
-        <!--发现-->
+        <!--Live-->
         <scene sceneID="Fkp-rh-qcf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bZw-ap-En7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="发现" image="btn_column_normal" selectedImage="btn_column_selected" id="Wjt-Zh-afy"/>
+                    <tabBarItem key="tabBarItem" title="Live" image="btn_column_normal" selectedImage="btn_column_selected" id="Wjt-Zh-afy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mme-wu-02m">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

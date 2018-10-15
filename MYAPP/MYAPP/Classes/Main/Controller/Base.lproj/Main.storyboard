@@ -38,20 +38,20 @@
             </objects>
             <point key="canvasLocation" x="30" y="-458"/>
         </scene>
-        <!--Discover-->
+        <!--Live-->
         <scene sceneID="RAD-TH-fyF">
             <objects>
-                <viewControllerPlaceholder storyboardName="Discover" id="oO3-R2-dLZ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Live" id="oO3-R2-dLZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="wyx-14-8ew"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pk8-Xq-3id" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="30" y="-203"/>
         </scene>
-        <!--MyStudy-->
+        <!--Follow-->
         <scene sceneID="2vW-0A-s9H">
             <objects>
-                <viewControllerPlaceholder storyboardName="MyStudy" id="mNp-p0-XEZ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Follow" id="mNp-p0-XEZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="anv-HL-ZsW"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XTk-Qm-be1" userLabel="First Responder" sceneMemberID="firstResponder"/>
